@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinskiy | Resume</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      b {
+        font-size: 12pt;
+        font-weight: 400;
+      }
+      a {
+        color: unset;
+      }
+      ul[role="list"] {
+        list-style-type: none;
+      }
+      ul[role="list"] ul {
+        margin-left: 14pt;
+        list-style-type: initial;
+      }
+
+      html {
+        background: lightgray;
+      }
+      body {
+        width: 210mm;
+        height: 297mm;
+        margin: auto;
+        padding-top: 19mm;
+        padding-left: 19mm;
+        padding-right: 13.2mm;
+        padding-bottom: 36.7mm;
+        background-color: white;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 24pt;
+        font-weight: 600;
+      }
+      h2 {
+        font-size: 16pt;
+        font-weight: 600;
+        padding-bottom: 2pt;
+        border-bottom: 2px solid black;
+      }
+      .section > h3 {
+        font-style: italic;
+        color: gray;
+      }
+      .list-item-header > h3 {
+        font-size: 14pt;
+        font-weight: 600;
+      }
+      .list-item-header > h4 {
+        font-style: italic;
+      }
+      .list-item-header + p {
+        text-align: end;
+      }
+      time + span {
+        color: gray;
+        font-style: italic;
+        display: block;
+      }
+
+      .header,
+      .section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 14pt;
+        margin-bottom: 20pt;
+      }
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 14pt;
+        row-gap: 4pt;
+      }
+      section > ul > li > header,
+      section > ul > li:not(:has(header)) {
+        display: flex;
+        justify-content: space-between;
+      }
+      :is(a, li):has(svg, img) {
+        display: flex;
+        align-items: center;
+        column-gap: 4pt;
+      }
+      .list-item-header {
+        margin-bottom: 4pt;
+      }
+
+      #projects-list,
+      #courses-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14pt;
+      }
+      .list-with-bullets-between {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .list-with-bullets-between > li:not(:last-child)::after {
+        content: "•";
+        margin-left: 6pt;
+        margin-right: 6pt;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Dima "Sinskiy" Gorlov</h1>
+      <nav>
+        <ul role="list" class="nav">
+          <li>
+            <a
+              href="mailto:sinskiy@proton.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                src="email.svg"
+                alt=""
+                width="16"
+                height="16"
+              />sinskiy@proton.me
+            </a>
+          </li>
+          <li>
+            <a href="tel:+79997706202" target="_blank" rel="noopener noreferrer"
+              ><img src="phone.svg" alt="" width="16" height="16" />+7 (999)
+              770-62-02</a
+            >
+          </li>
+          <li>
+            <img src="location.svg" alt="" width="16" height="16" />Tambov,
+            Russia
+          </li>
+          <li>
+            <a
+              href="https://www.sinskiy.website"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                src="url.svg"
+                alt=""
+                width="16"
+                height="16"
+              />sinskiy.website</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/sinskiy"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="github.svg" alt="" width="16" height="16" />@sinskiy</a
+            >
+          </li>
+          <li>
+            <img src="discord.svg" alt="" width="16" height="16" />@sinskiy_
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section">
+        <h2>Projects</h2>
+        <ul role="list" id="projects-list">
+          <li>
+            <header>
+              <a
+                href="https://multipedia.sinskiy.website"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="list-item-header"
+              >
+                <h3>Multipedia</h3>
+                <h4>Wikipedia but with multiple articles per topic</h4>
+              </a>
+              <p>
+                <time datetime="2024-10-01">October 2024</time>
+                -
+                <time datetime="2024-12-01">December 2024</time>
+              </p>
+            </header>
+            <p>
+              Learned CMS, OAuth, file storage, pagination... Cool features:
+            </p>
+            <ul>
+              <li>OAuth, profile pictures</li>
+              <li>live markdown editor</li>
+              <li>
+                leaderboard (articles, topics), random article, by friends,
+                liked articles
+              </li>
+              <li>article views, likes, comments (with markdown)</li>
+              <li>copy articles, share drafts with friends</li>
+            </ul>
+          </li>
+          <li>
+            <header>
+              <a
+                href="https://words.sinskiy.website"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="list-item-header"
+              >
+                <h3>Most popular words</h3>
+                <h4>View and learn words</h4>
+              </a>
+              <p>
+                <time datetime="2024-12-01">December 2024</time>
+              </p>
+            </header>
+            <p>
+              Learned full-stack single framework approach, react server
+              components
+            </p>
+          </li>
+          <li>
+            <header>
+              <a
+                href="https://chat.sinskiy.website"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="list-item-header"
+              >
+                <h3>Chat</h3>
+                <h4>A simple chat app</h4>
+              </a>
+              <p>
+                <time datetime="2024-08-01">August 2024</time>
+                -
+                <time datetime="2024-09-01">September 2024</time>
+              </p>
+            </header>
+            <p>Learned full-stack, live updates, ORMs and testing</p>
+          </li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>Courses</h2>
+        <ul role="list" id="courses-list">
+          <li>
+            <a
+              href="https://certificates.cs50.io/e871ecb3-7b23-4f3c-924a-af7ea54c6c83.pdf?size=A4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="list-item-header"
+            >
+              <h3>CS50's Introduction to Computer Science</h3>
+              <h4>Harvard</h4>
+            </a>
+            <p>
+              <time datetime="2024-02-01">February 2024</time>
+              -
+              <time datetime="2024-12-01">December 2024</time>
+              <span>with a big break</span>
+            </p>
+          </li>
+          <li>
+            <a
+              href="https://certificates.cs50.io/180ebd74-0b3b-43d2-8bad-0dc1b8d0f0ad.pdf?size=A4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="list-item-header"
+            >
+              <h3>CS50's Introduction to Databases with SQL</h3>
+              <h4>Harvard</h4>
+            </a>
+            <p>
+              <time datetime="2023-10-01">October 2023</time>
+              -
+              <time datetime="2023-12-01">December 2023</time>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>Technical Skills</h2>
+        <h3>I focus on approaches, not technologies</h3>
+        <ul role="list" class="list-with-bullets-between">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS/TS</li>
+          <li>React</li>
+          <li>React Router</li>
+          <li>React Query</li>
+          <li>Redux Toolkit</li>
+          <li>Next.js</li>
+          <li>Bundling</li>
+          <li>Testing</li>
+          <li>Storybook</li>
+          <li>Node</li>
+          <li>Express</li>
+          <li>APIs</li>
+          <li>REST</li>
+          <li>GraphQL/Apollo</li>
+          <li>WebSocket/Socket.io</li>
+          <li>SQL</li>
+          <li>MongoDB</li>
+          <li>Redis</li>
+          <li>ORMs</li>
+          <li>CMS</li>
+          <li>Astro</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>Languages</h2>
+        <ul role="list" class="list-with-bullets-between">
+          <li>
+            <strong>Russian&nbsp;</strong>
+            - native
+          </li>
+          <li>
+            <strong>English&nbsp;</strong>
+            - conversational
+          </li>
+        </ul>
+      </section>
+      <!-- <section class="section"> -->
+      <!-- <h2>Education</h2> -->
+      <!-- <p><b>find my musical diploma</b></p> -->
+      <!-- </section> -->
+    </main>
+  </body>
+</html>
