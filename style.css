@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+b {
+  font-size: 12pt;
+  font-weight: 400;
+}
+a {
+  color: unset;
+}
+ul[role="list"] {
+  list-style-type: none;
+}
+ul[role="list"] ul {
+  margin-left: 14pt;
+  list-style-type: initial;
+}
+
+html {
+  background: lightgray;
+}
+body {
+  width: 210mm;
+  height: 297mm;
+  margin: auto;
+  padding-top: 19mm;
+  padding-left: 19mm;
+  padding-right: 13.2mm;
+  padding-bottom: 36.7mm;
+  background-color: white;
+}
+@page {
+  size: A4;
+  margin: 0;
+}
+
+h1 {
+  font-size: 24pt;
+  font-weight: 600;
+}
+h2 {
+  font-size: 16pt;
+  font-weight: 600;
+  padding-bottom: 2pt;
+  border-bottom: 2px solid black;
+}
+.section > h3 {
+  font-style: italic;
+  color: gray;
+}
+.list-item-header > h3 {
+  font-size: 14pt;
+  font-weight: 600;
+}
+.list-item-header > h4 {
+  font-style: italic;
+}
+.list-item-header + p {
+  text-align: end;
+}
+time + span {
+  color: gray;
+  font-style: italic;
+  display: block;
+}
+
+.header,
+.section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14pt;
+  margin-bottom: 20pt;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 14pt;
+  row-gap: 4pt;
+}
+section > ul > li > header,
+section > ul > li:not(:has(header)) {
+  display: flex;
+  justify-content: space-between;
+}
+:is(a, li):has(svg, img) {
+  display: flex;
+  align-items: center;
+  column-gap: 4pt;
+}
+.list-item-header {
+  margin-bottom: 4pt;
+}
+
+#projects-list,
+#courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14pt;
+}
+.list-with-bullets-between {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-with-bullets-between > li:not(:last-child)::after {
+  content: "•";
+  margin-left: 6pt;
+  margin-right: 6pt;
+}
