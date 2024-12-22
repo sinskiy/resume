@@ -98,7 +98,10 @@ section > ul > li:not(:has(header)) {
   column-gap: 4pt;
 }
 .list-item-header {
-  margin-bottom: 4pt;
+  margin-bottom: 6pt;
+}
+.list-item-header > h3:first-child {
+  margin-bottom: 1pt;
 }
 
 #projects-list,
