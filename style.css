@@ -114,6 +114,11 @@ section > ul > li:not(:has(header)) {
   display: flex;
   flex-wrap: wrap;
 }
+.list-with-bullets-between > li > .description {
+  color: gray;
+  font-style: italic;
+  margin-left: 0.25rem;
+}
 .list-with-bullets-between > li:not(:last-child)::after {
   content: "•";
   margin-left: 6pt;
